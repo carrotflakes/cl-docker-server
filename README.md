@@ -1,4 +1,4 @@
-# cl-docker-server
+# cl-server-docker
 A template of Common Lisp server as docker image.
 
 ## Author
