@@ -15,8 +15,6 @@ RUN ros -s ningle \
 
 COPY . /app/
 
-ARG PORT=80
-
 CMD clackup --port $PORT --server woo --address "0.0.0.0" /app/app.lisp
 
 
