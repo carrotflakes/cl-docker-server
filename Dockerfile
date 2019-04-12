@@ -7,14 +7,9 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN ros install clack \
-  && ros -s clack
-
-RUN ros -s ningle \
-  && git clone https://github.com/fukamachi/woo $HOME/.roswell/local-projects/woo \
+  && ros -s ningle \
   && ros -s woo
 
 COPY . /app/
 
 CMD clackup --port $PORT --server woo --address "0.0.0.0" /app/app.lisp
-
-
